@@ -340,7 +340,7 @@ def draw_lines_from_rectangles(rectangle1, rectangle2, n, window):
       :type window: rg.RoseWindow
       """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #          Tests have been written for you (above).
     #
     # CONSIDER using the ACCUMULATOR IN GRAPHICS pattern,
@@ -376,19 +376,19 @@ def draw_lines_from_rectangles(rectangle1, rectangle2, n, window):
             line1.color = rectangle1.outline_color
             line1.attach_to(window)
 
-            if rectangle1.corner_1.x < rectangle2.corner_1.x:
+            if rectangle1.corner_1.x < rectangle2.corner_1.x and rectangle1.corner_1.y < rectangle2.corner_1.y:
                 x1 = x1 - 0.5 * r1_center_x
                 y1 = y1 + 0.5 * r1_center_y
 
                 x2 = x2 - 0.25 * r2_center_x
                 y2 = y2 + 0.5 * r1_center_y
-            # elif rectangle1.corner_1.y < rectangle2.corner_1.y:
-            #     x1 = x1 - 0.5 * r1_center_x
-            #     y1 = y1 + 0.5 * r1_center_y
-            #
-            #     x2 = x2 - 0.5 * r2_center_x
-            #     y2 = y2 + 0.5 * r1_center_y/
-            else:
+            elif rectangle1.corner_1.y > rectangle2.corner_1.y and rectangle1.corner_1.x < rectangle2.corner_1.x:
+                x1 = x1 - 0.5 * r1_center_x
+                y1 = y1 - 0.5 * r1_center_y
+
+                x2 = x2 - 0.5 * r1_center_x
+                y2 = y2 - 0.5 * r1_center_y
+            else: #Green and black lines
                 x1 = x1 + 0.5*r1_center_x
                 y1 = y1 + 0.5 * r1_center_y
 
@@ -402,19 +402,19 @@ def draw_lines_from_rectangles(rectangle1, rectangle2, n, window):
             line1.color = rectangle2.outline_color
             line1.attach_to(window)
 
-            if rectangle1.corner_1.x < rectangle2.corner_1.x:
+            if rectangle1.corner_1.x < rectangle2.corner_1.x and rectangle1.corner_1.y < rectangle2.corner_1.y:
                 x1 = x1 - 0.5 * r1_center_x
                 y1 = y1 + 0.5 * r1_center_y
 
                 x2 = x2 - 0.25 * r2_center_x
                 y2 = y2 + 0.5 * r1_center_y
 
-            # elif rectangle1.corner_1.y < rectangle2.corner_1.y:
-            #     x1 = x1 - 0.5 * r1_center_x
-            #     y1 = y1 + 0.5 * r1_center_y
-            #
-            #     x2 = x2 - 0.5 * r2_center_x
-            #     y2 = y2 + 0.5 * r1_center_y
+            elif rectangle1.corner_1.y > rectangle2.corner_1.y and rectangle1.corner_1.x < rectangle2.corner_1.x:
+                x1 = x1 - 0.5 * r1_center_x
+                y1 = y1 - 0.5 * r1_center_y
+
+                x2 = x2 - 0.5 * r1_center_x
+                y2 = y2 - 0.5 * r1_center_y
             else:
                 x1 = x1 + 0.5*r1_center_x
                 y1 = y1 + 0.5 * r1_center_y
