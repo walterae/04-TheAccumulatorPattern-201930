@@ -387,7 +387,7 @@ def draw_lines_from_rectangles(rectangle1, rectangle2, n, window):
             #     y1 = y1 + 0.5 * r1_center_y
             #
             #     x2 = x2 - 0.5 * r2_center_x
-            #     y2 = y2 + 0.5 * r1_center_y
+            #     y2 = y2 + 0.5 * r1_center_y/
             else:
                 x1 = x1 + 0.5*r1_center_x
                 y1 = y1 + 0.5 * r1_center_y
